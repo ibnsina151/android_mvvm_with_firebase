@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="signinModel"
+            type="ai.retail.nimontron.viewmodels.datamodels.SignInModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/standard_margin">
+
+
+        <ImageView
+            android:id="@+id/iv_reg_logo"
+            android:layout_width="@dimen/reg_logo_size"
+            android:layout_height="@dimen/reg_logo_size"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toTopOf="@id/tv_label_signin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_label_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/text_sign_in"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_display_1_material"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_reg_logo"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/tv_enter_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:gravity="center"
+            android:text="@string/text_enter_phone"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_subhead_material"
+            app:layout_constraintBottom_toTopOf="@id/et_phone_number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_signin" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/number_field_margin"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_phone_number"
+            android:inputType="phone"
+            android:maxLength="@integer/mobile_number_length"
+            android:singleLine="true"
+            android:text="@={signinModel.phoneNumber}"
+            android:textSize="@dimen/text_size_medium_material"
+            app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number" />
+
+        <TextView
+            android:id="@+id/tv_phone_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_bangladesh"
+            android:drawablePadding="@dimen/half_standard_margin"
+            android:gravity="center_vertical"
+            android:text="@string/number_prefix"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_medium_material"
+            app:layout_constraintBottom_toBottomOf="@+id/et_phone_number"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_phone_number"
+            app:layout_constraintTop_toTopOf="@id/et_phone_number" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_1dp"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/number_field_margin"
+            android:background="@color/colorPrimaryDark"
+            android:enabled="@{signinModel.valid}"
+            android:text="@string/text_sign_in"
+            android:textColor="@color/md_black_1000"
+            app:layout_constraintBottom_toTopOf="@id/tv_registration_internet_msg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+        <TextView
+            android:id="@+id/tv_registration_internet_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:gravity="center"
+            android:text="@string/text_registration_internet_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_in" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

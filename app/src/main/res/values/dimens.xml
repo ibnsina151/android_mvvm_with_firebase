@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16</dimen>
+    <dimen name="reg_logo_size">74dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+    <dimen name="half_standard_margin">8dp</dimen>
+    <dimen name="number_field_margin">64dp</dimen>
+
+    <dimen name="text_size_caption_material">12sp</dimen>
+    <dimen name="text_size_small_material">14sp</dimen>
+    <dimen name="text_size_subhead_material">16sp</dimen>
+    <dimen name="text_size_medium_material">18sp</dimen>
+    <dimen name="text_size_title_material">20sp</dimen>
+
+    <dimen name="text_size_display_1_material">34sp</dimen>
+    <dimen name="text_size_display_2_material">45sp</dimen>
+    <dimen name="text_size_display_3_material">56sp</dimen>
+    <dimen name="text_size_display_4_material">112sp</dimen>
+    <dimen name="text_size_headline_material">24sp</dimen>
+
+
+    <dimen name="default_1dp">1dp</dimen>
+    <dimen name="medium_margin">36dp</dimen>
+
+</resources>

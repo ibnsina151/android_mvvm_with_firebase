@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="mobile_number_length">4</integer>
+    <integer name="sms_code_length">4</integer>
+</resources>

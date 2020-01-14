@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "892502918690",
+    "firebase_url": "https://bkashnimontron.firebaseio.com",
+    "project_id": "bkashnimontron",
+    "storage_bucket": "bkashnimontron.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892502918690:android:4905b44ec2e08952bb6c7b",
+        "android_client_info": {
+          "package_name": "ai.retail.nimontron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892502918690-mst7dd55adnfgkejrs1d7tn4k5qil94u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ai.retail.nimontron",
+            "certificate_hash": "a6faec74d9ecb185d575610517e061b0743ea43b"
+          }
+        },
+        {
+          "client_id": "892502918690-a5l25eelcqe6gj9l1nhhlcn3m97hvm71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBa_K_del3OrWtFeAMmxQKYjauF_D2j8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892502918690-a5l25eelcqe6gj9l1nhhlcn3m97hvm71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

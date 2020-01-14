@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">nimontron</string>
+    <string name="settings">Settings</string>
+
+    <string name="text_provide_phone_state_permission">ফোন স্টেট অনুমতি প্রদান করুন</string>
+    <string name="text_provide_camera_permission">Provide camera permission</string>
+    <string name="text_sign_in">সাইন ইন</string>
+    <string name="text_enter_phone">"আপনার ফোন নাম্বারটি লিখুন সাইন আপ করার জন্য"</string>
+    <string name="hint_phone_number">আপনার ফোন নাম্বার</string>
+    <string name="number_prefix">+88</string>
+    <string name="text_registration_internet_msg">"আপনার ইন্টারনেট সংযোগ চালু রাখুন রেজিস্ট্রেশন শেষ করার জন্য"</string>
+    <string name="text_verify_phone_number">আপনার ফোন নাম্বার যাচাই করুন</string>
+    <string name="text_verify_phone_number_subtitle">"আপনার নাম্বারে পাঠানো %s ৬ - ডিজিটের কোডটি চাপুন"</string>
+    <string name="hint_verification_code">এখানে কোডটি চাপুন</string>
+    <string name="text_verify_code">কোড যাচাই করুন</string>
+    <string name="text_resend_code">কোডটি পাননি? আবার কোড পাঠান</string>
+    <string name="text_ok">ঠিক আছে</string>
+    <string name="text_please_wait">Please wait</string>
+    <string name="please_keep_your_internet_connection_truned_on">ইন্টারনেট সংযোগ চালু রাখুন</string>
+    <string name="toast_code_resent">পুনরায় কোড পাঠানো হয়েছে</string>
+    <string name="verification_failed">Verification failed</string>
+
+</resources>

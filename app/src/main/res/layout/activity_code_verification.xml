@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="codeModel"
+            type="ai.retail.nimontron.viewmodels.datamodels.CodeVerificationModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_white_1000"
+        android:padding="@dimen/standard_margin">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_verify_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/text_verify_phone_number"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_headline_material"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_verify_number_subtitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_verify_number_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:gravity="center"
+            android:text="@string/text_verify_phone_number_subtitle"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_medium_material"
+            app:layout_constraintBottom_toTopOf="@id/til_verification_code"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_verify_number_title" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@color/md_black_1000"
+            app:layout_constraintBottom_toTopOf="@id/btn_verify_code"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_verify_number_subtitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:maxLength="@integer/sms_code_length"
+                android:id="@+id/tie_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/hint_verification_code"
+                android:inputType="number"
+                android:paddingBottom="@dimen/standard_margin"
+                android:text="@={codeModel.code}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:enabled="@{codeModel.valid}"
+            android:text="@string/text_verify_code"
+            app:layout_constraintBottom_toTopOf="@id/tv_resend_code"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_verification_code" />
+
+        <TextView
+            android:id="@+id/tv_resend_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/text_resend_code"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_size_medium_material"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_verify_code"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
