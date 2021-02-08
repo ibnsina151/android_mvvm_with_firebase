@@ -25,6 +25,8 @@ import ai.retail.nimontron.firebase.storage.impl.FirebaseStorageHelperImpl;
 import ai.retail.nimontron.helper.CrashlyticsHelper;
 import ai.retail.nimontron.helper.LocationManager;
 import ai.retail.nimontron.helper.PermissionManager;
+
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -119,8 +121,14 @@ public class AppModule {
 
     @Provides
     @ApplicationScope
-    CrashlyticsHelper getCrashlyticsHelper() {
-        return new CrashlyticsHelper();
+    FirebaseCrashlytics getFirebaseCrashlytics(){
+        return FirebaseCrashlytics.getInstance();
+    }
+
+    @Provides
+    @ApplicationScope
+    CrashlyticsHelper getCrashlyticsHelper(FirebaseCrashlytics crashlytics) {
+        return new CrashlyticsHelper(crashlytics);
     }
 
 
