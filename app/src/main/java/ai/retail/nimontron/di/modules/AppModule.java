@@ -2,9 +2,7 @@ package ai.retail.nimontron.di.modules;
 
 import android.app.Application;
 import android.content.Context;
-
 import androidx.room.Room;
-
 import ai.retail.nimontron.data.DataManager;
 import ai.retail.nimontron.data.DbHelper;
 import ai.retail.nimontron.data.PreferenceHelper;
@@ -127,8 +125,8 @@ public class AppModule {
 
     @Provides
     @ApplicationScope
-    CrashlyticsHelper getCrashlyticsHelper(FirebaseCrashlytics crashlytics) {
-        return new CrashlyticsHelper(crashlytics);
+    CrashlyticsHelper getCrashlyticsHelper(FirebaseCrashlytics firebaseCrashlytics) {
+        return new CrashlyticsHelper(firebaseCrashlytics);
     }
 
 

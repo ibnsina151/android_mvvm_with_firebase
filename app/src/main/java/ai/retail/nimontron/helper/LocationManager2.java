@@ -21,6 +21,9 @@ import ai.retail.nimontron.utils.Constants;
 public class LocationManager2 extends LiveData<Location> {
 
 
+    /**
+     * Declared {@link LocationManager2} member variables
+     */
     private static final String TAG = "LocationManager";
     private static final long LOCATION_INTERVAL = 5000;
     private static final long FASTEST_LOCATION_INTERVAL = 2000;
@@ -28,11 +31,13 @@ public class LocationManager2 extends LiveData<Location> {
     private int MAX_RETRY = 7;
     private int mCurrentCount;
     private Location mBestLocation;
+
     private final LocationCallback mLocationCallback;
     private final FusedLocationProviderClient mFusedLocationProviderClient;
 
     public LocationManager2(Context context) {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context);
+
         mLocationCallback = new LocationCallback(){
             @Override
             public void onLocationResult(LocationResult locationResult) {
@@ -40,8 +45,6 @@ public class LocationManager2 extends LiveData<Location> {
 
                 Log.d(TAG, "connectLocationReque: "+locationResult.getLocations());
                 for (Location location: locationResult.getLocations()){
-
-
                     if (location !=null){
                         Log.d(TAG, "connectLocationProvider: "+location);
 //                        setValue(location);
@@ -80,7 +83,6 @@ public class LocationManager2 extends LiveData<Location> {
 
     @Override
     protected void onActive() {
-        // Wait for the GoogleApiClient to be connected
         connectLocationRequest();
     }
 
